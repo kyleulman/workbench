@@ -5,7 +5,7 @@
 </script>
 
 <header
-	class="mobile-l:flex-row mobile-l:items-center flex flex-col items-start justify-between gap-8"
+	class="flex flex-col sm:flex-row items-center justify-between gap-8 p-8"
 >
 	<h1 class="flex-1">
 		<a href={content.title.href}>
@@ -18,8 +18,8 @@
 	</h1>
 	<ul class="card space-y-2">
 		{#each content.contact as item}
-			<li class="flex items-center gap-2">
-				<span class="material-icons">{item.icon}</span>
+			<li class="flex gap-2">
+				<span class="font-material-outlined text-lg">{item.icon}</span>
 				{#if item.href}
 					<a href={item.href}>{item.label}</a>
 				{:else}

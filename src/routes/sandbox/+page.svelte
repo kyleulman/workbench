@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { CTA, Card, CardList, Carousel, Figure } from '$lib';
-	import Footer from '$lib/Footer.svelte';
+	import { CTA, Card, CardList, Carousel, Figure, Footer, Header, InfoList, PreloadImage, Quote, Shroud } from '$lib';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -15,6 +14,31 @@
 		}}
 	/>
 </header>
+<Header content={{
+	title: {
+		href: "/",
+		label: "Site Title",
+		logo: {
+			src: "https://picsum.photos/250"
+		}
+	},
+	contact: [
+		{
+			icon: "phone",
+			label: "910-555-1223",
+			href: "tel:9105551223"
+		},
+		{
+			icon: "map",
+			label: "123 South Front Street <br/> Wilmington, NC 28401"
+		},
+		{
+			icon: "bolt",
+			label: "Lightning Bolt",
+			href: "#lightning-bolt"
+		}
+	]
+}}/>
 <section>
 	<Figure content={{
 		src: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13202.146388775169!2d-77.89388890000001!3d34.18376375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1682449390832!5m2!1sen!2sus",
