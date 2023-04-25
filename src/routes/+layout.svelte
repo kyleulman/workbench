@@ -1,21 +1,22 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import Head from '$lib/Head.svelte';
-	import { LightSwitch } from '@skeletonlabs/skeleton';
-	import '@skeletonlabs/skeleton/styles/all.css';
-	import '@skeletonlabs/skeleton/themes/theme-rocket.css';
-	// import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
-	import '@glidejs/glide/dist/css/glide.core.min.css';
+	// import '@glidejs/glide/dist/css/glide.core.min.css';
 	import '../app.css';
 	import type { LayoutData } from './$types';
 
 	export let data: LayoutData;
 </script>
 
-<Head page={$page.data.content.metadata} shared={data.shared} />
+{#key $page}
+	<Head page={$page.data.content.metadata} shared={data.shared} />
+{/key}
 
-<div class="fixed right-0 z-50 p-8"><LightSwitch /></div>
+<header class="space-x-2 p-4">
+	<a href="/">Home</a>
+	<a href="/sandbox">Sandbox</a>
+</header>
 
-<main class="my-8 flex flex-col gap-8 px-4">
+<main class="my-6 flex flex-col gap-12 px-3">
 	<slot />
 </main>

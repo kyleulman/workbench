@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { Block } from "./types";
+	import type { Block } from './types';
 
-  export let blocks: Block[];
+	export let blocks: Block[];
 </script>
 
 {#each blocks as block}

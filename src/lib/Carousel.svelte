@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import Glide from '@glidejs/glide';
 	import '@glidejs/glide/dist/css/glide.core.min.css';
 	import { onMount } from 'svelte';
@@ -15,7 +15,7 @@
 	});
 </script>
 
-<div class="glide relative bg-surface-800 pb-2">
+<div class="glide bg-surface-800 relative pb-2">
 	<div class="glide__track" data-glide-el="track">
 		<ul class="glide__slides flex">
 			{#each content.slides as slide}
@@ -44,4 +44,4 @@
 			</button>
 		</div>
 	{/if}
-</div>
+</div> -->

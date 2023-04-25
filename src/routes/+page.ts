@@ -1,11 +1,11 @@
 import type { PageLoad } from './$types';
 
 export const load = (async ({ url }) => {
-	const page = (await import(`./content`)).home.metadata;
+	const page = await import(`./content`);
 
-	page.url = url.href;
+	page.home.metadata.url = url.href;
 
 	return {
-		page
+		content: page.home
 	};
 }) satisfies PageLoad;

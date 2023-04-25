@@ -1,36 +1,54 @@
-body {
-	@apply mx-auto max-w-xl;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply mx-auto max-w-xl bg-thunder-900 text-thunder-100;
+	}
 }
 
-img,
-iframe {
-	border-radius: var(--theme-rounded-container);
+@layer components {
+	h1 {
+		@apply text-4xl;
+	}
+
+	h2 {
+		@apply text-3xl;
+	}
+
+	h3 {
+		@apply text-2xl;
+	}
+
+	ul.inline-list {
+		@apply my-2 list-none;
+	}
+
+	ul.inline-list > li > span {
+		@apply before:text-primary-500 before:font-material-outlined flex items-start before:mr-1 before:text-2xl before:leading-none before:content-["check"];
+	}
+
+	ul.inline-list > li > ul {
+		@apply my-0 ml-6;
+	}
+
+	.btn {
+		@apply inline-block bg-thunder-800 px-2 py-1 text-center hover:bg-thunder-700;
+	}
+
+	.resp-row {
+		@apply flex flex-col gap-6 sm:flex-row;
+	}
 }
 
-.material-symbols-outlined {
-	font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+@layer utilities {
+	.material-symbols-outlined {
+		font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+	}
 }
 
-/* Extends Skeleton .card  */
-.card {
-	@apply p-4;
-}
-
-/* Custom inline bullet lists */
-ul.inline-list {
-	@apply my-2 list-none;
-}
-
-ul.inline-list > li > span {
-	@apply flex items-start before:mr-1 before:font-material-outlined before:text-2xl before:leading-none before:text-primary-500 before:content-["check"];
-}
-
-ul.inline-list > li > ul {
-	@apply my-0 ml-6;
-}
-
-/* Rocket theme uses Space Grotesk */
 @font-face {
-	font-family: 'Space Grotesk';
-	src: url('/fonts/SpaceGrotesk-VariableFont_wght.ttf');
+	font-family: 'Pathway Extreme';
+	src: url('./assets/fonts/PathwayExtreme.ttf');
 }

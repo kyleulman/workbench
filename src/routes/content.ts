@@ -1,4 +1,4 @@
-import type { PageMetadata, SharedMetadata } from '$lib/types';
+import type { PageMetadata, SharedMetadata, Block } from '$lib/types';
 
 export const sharedMetadata: SharedMetadata = {
 	title: 'Workbench',
@@ -15,10 +15,11 @@ export const sharedMetadata: SharedMetadata = {
 	}
 };
 
-export const home: { metadata: PageMetadata } = {
+export const home: { metadata: PageMetadata; blocks: Block[] } = {
 	metadata: {
 		title: 'Hello World!',
 		description: 'The tools that power my projects.',
 		url: ''
-	}
+	},
+	blocks: []
 };

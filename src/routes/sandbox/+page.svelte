@@ -1,27 +1,12 @@
 <script lang="ts">
-	import type { PageData } from "./$types";
-  import { CardList, Card } from "$lib";
+	import type { PageData } from './$types';
+	import { Bio, IconList, Footer } from '$lib';
 
-  export let data: PageData;
+	export let data: PageData;
 </script>
 
-<header>
-	<Card
-		content={{
-			heading: data.page.title,
-			detail: data.page.description,
-			isSkeletonCard: true
-		}}
-	/>
-</header>
-<section>
-  <CardList content={{
-    heading: "What's Inside",
-    list: [
-      {
-        icon: "settings",
-        detail: `<a href="/sandbox/components">Components</a>`
-      }
-    ],
-  }} />
-</section>
+<h1 class="text-center sm:text-left">{data.content.header.heading}</h1>
+<Bio content={data.content.bio} />
+<IconList content={data.content.projects} />
+<IconList content={data.content.externals} />
+<Footer content={data.content.footer} />

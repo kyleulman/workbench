@@ -51,15 +51,26 @@ export interface Footer {
 }
 
 export interface Header {
-	title: {
+	heading: string;
+	cta: {
 		href: string;
 		label: string;
-		logo?: Figure;
 	};
-	contact: {
-		icon: string;
+}
+
+export interface IconList {
+	heading?: string;
+	list: {
 		href?: string;
-		label: string;
+		heading: string;
+		detail?: string;
+		icon?: {
+			name: string;
+			size: string;
+		};
+		image?: Image;
+		isReversed?: boolean;
+		isItemsCenter?: boolean;
 	}[];
 }
 
@@ -70,6 +81,7 @@ export interface List {
 		image?: Image;
 		heading?: string;
 		detail?: string;
+		href?: string;
 	}[];
 }
 
@@ -78,6 +90,11 @@ export interface Quote {
 	name: string;
 	href: string;
 	label: string;
+}
+
+export interface Bio {
+	image: Image;
+	detail: string;
 }
 
 // * Data

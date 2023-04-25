@@ -6,7 +6,7 @@
 
 <article class="space-y-2">
 	{#if content.heading}
-		<h2>{content.heading}</h2>
+		<h2>{@html content.heading}</h2>
 	{/if}
 	<ul class="flex flex-wrap gap-4">
 		{#each content.list as item}
@@ -15,7 +15,7 @@
 			>
 				{#if item.icon}
 					<span
-						class="list-item-icon variant-filled-primary h-8 w-8 font-material-outlined text-2xl"
+						class="list-item-icon variant-filled-primary font-material-outlined h-8 w-8 text-2xl"
 					>
 						{item.icon}
 					</span>

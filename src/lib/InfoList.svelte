@@ -4,47 +4,34 @@
 	export let content: List;
 </script>
 
-<article class="card space-y-8">
+<article class="space-y-2">
 	{#if content.heading}
-		<h2>{content.heading}</h2>
+		<h2>{@html content.heading}</h2>
 	{/if}
-	<ul class="space-y-8">
-		{#each content.list as item}
-			<li class="flex flex-col items-start gap-4 sm:flex-row">
-				{#if item.icon || item.image}
-					<figure
-						class="list-item-icon variant-filled-primary flex h-14 w-14 items-start justify-center overflow-hidden p-1"
-					>
-						{#if item.icon}
-							<span class="font-material-outlined text-[50px] leading-none">
-								{item.icon}
-							</span>
-						{:else if item.image}
-							<img
-								src={item.image.src}
-								alt={item.image.alt}
-								width={item.image.width}
-								height={item.image.height}
-								class="rounded-full"
-							/>
+	<nav class="list-nav">
+		<ul>
+			{#each content.list as item}
+				<li>
+					<a href={item.href}>
+						{#if item.image}
+							<img src={item.image.src} alt={item.image.alt} class="h-8 w-8" />
+						{:else if item.icon}
+							<span
+								class="font-material-outlined h-8 w-8 text-[32px] leading-none"
+								>key</span
+							>
 						{/if}
-					</figure>
-				{/if}
-				<div class="flex-1 space-y-2">
-					{#if item.heading}
-						<h3>{@html item.heading}</h3>
-					{/if}
-					{#if item.detail}
-						<p>{@html item.detail}</p>
-					{/if}
-				</div>
-			</li>
-		{/each}
-	</ul>
+						<span class="flex-auto">
+							{#if item.heading}
+								<h2>{item.heading}</h2>
+							{/if}
+							{#if item.detail}
+								<p class="whitespace-normal">{item.detail}</p>
+							{/if}
+						</span>
+					</a>
+				</li>
+			{/each}
+		</ul>
+	</nav>
 </article>
-
-<style lang="postcss">
-	.list-item-icon {
-		border-radius: var(--theme-rounded-base);
-	}
-</style>
