@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { CTA, Card, CardList, Carousel, Figure } from '$lib';
-	import type { CarouselContent } from '$lib/types';
+	import Footer from '$lib/Footer.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -214,6 +214,10 @@
 		</ul>
 	</article>
 </section>
+<Footer content={{
+	notice: "This is a footer notice, you can add anything you want here."
+	,copyright: "Kyle Ulman"
+}}/>
 
 <style lang="postcss">
 	header,
