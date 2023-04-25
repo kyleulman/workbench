@@ -54,7 +54,7 @@ export interface Header {
 	title: {
 		href: string;
 		label: string;
-		logo: Figure;
+		logo?: Figure;
 	};
 	contact: {
 		icon: string;
@@ -66,8 +66,10 @@ export interface Header {
 export interface List {
 	heading?: string;
 	list: {
-		icon: string;
-		detail: string;
+		icon?: string;
+		image?: Image;
+		heading?: string;
+		detail?: string;
 	}[];
 }
 

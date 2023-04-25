@@ -9,11 +9,11 @@
 		<iframe
 			src={content.src}
 			title={content.title}
-			class="w-full rounded"
+			class="w-full"
 			height={content.height}
 		/>
 	{:else}
-		<img src={content.src} alt={content.alt} class="rounded bg-surface-700" />
+		<img src={content.src} alt={content.alt} class="bg-surface-700" />
 	{/if}
 
 	{#if content.caption}

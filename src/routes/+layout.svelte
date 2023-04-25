@@ -3,7 +3,8 @@
 	import Head from '$lib/Head.svelte';
 	import { LightSwitch } from '@skeletonlabs/skeleton';
 	import '@skeletonlabs/skeleton/styles/all.css';
-	import '@skeletonlabs/skeleton/themes/theme-rocket.css';
+	// import '@skeletonlabs/skeleton/themes/theme-rocket.css';
+	import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 	import '@glidejs/glide/dist/css/glide.core.min.css';
 	import '../app.css';
 	import type { LayoutData } from './$types';

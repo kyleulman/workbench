@@ -1,5 +1,17 @@
 <script lang="ts">
-	import { CTA, Card, CardList, Carousel, Figure, Footer, Header, InfoList, PreloadImage, Quote, Shroud } from '$lib';
+	import {
+		CTA,
+		Card,
+		CardList,
+		Carousel,
+		Figure,
+		Footer,
+		Header,
+		InfoList,
+		PreloadImage,
+		Quote,
+		Shroud
+	} from '$lib';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -14,44 +26,74 @@
 		}}
 	/>
 </header>
-<Header content={{
-	title: {
-		href: "/",
-		label: "Site Title",
-		logo: {
-			src: "https://picsum.photos/250"
-		}
-	},
-	contact: [
-		{
-			icon: "phone",
-			label: "910-555-1223",
-			href: "tel:9105551223"
+<Header
+	content={{
+		title: {
+			href: '/',
+			label: 'Site Title',
+			logo: {
+				src: 'https://picsum.photos/250'
+			}
 		},
-		{
-			icon: "map",
-			label: "123 South Front Street <br/> Wilmington, NC 28401"
-		},
-		{
-			icon: "bolt",
-			label: "Lightning Bolt",
-			href: "#lightning-bolt"
-		}
-	]
-}}/>
+		contact: [
+			{
+				icon: 'phone',
+				label: '910-555-1223',
+				href: 'tel:9105551223'
+			},
+			{
+				icon: 'map',
+				label: '123 South Front Street <br/> Wilmington, NC 28401'
+			},
+			{
+				icon: 'bolt',
+				label: 'Lightning Bolt',
+				href: '#lightning-bolt'
+			}
+		]
+	}}
+/>
 <section>
-	<Figure content={{
-		src: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13202.146388775169!2d-77.89388890000001!3d34.18376375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1682449390832!5m2!1sen!2sus",
-		title: "Iframe.",
-		as: "iframe",
-		height: 300
-	}}/>
+	<InfoList
+		content={{
+			heading: 'Info List Heading',
+			list: [
+				{
+					icon: 'key',
+					heading: 'Info List Item Heading',
+					detail: 'Lorem ipsum dolor sit, amet consectetur adipisicing.'
+				},
+				{
+					image: {
+						src: '/key.svg',
+						alt: 'placeholder',
+						width: 50,
+						height: 50
+					},
+					heading: 'Info List Item Heading',
+					detail: 'Lorem ipsum dolor sit, amet consectetur adipisicing.'
+				}
+			]
+		}}
+	/>
 </section>
 <section>
-	<Figure content={{
-		src: "https://picsum.photos/600",
-		alt: "Placeholder."
-	}}/>
+	<Figure
+		content={{
+			src: 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13202.146388775169!2d-77.89388890000001!3d34.18376375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1682449390832!5m2!1sen!2sus',
+			title: 'Iframe.',
+			as: 'iframe',
+			height: 300
+		}}
+	/>
+</section>
+<section>
+	<Figure
+		content={{
+			src: 'https://picsum.photos/600',
+			alt: 'Placeholder.'
+		}}
+	/>
 </section>
 <section>
 	<CTA
@@ -215,14 +257,20 @@
 </section>
 <section>
 	<article>
-		<Carousel content={{
-			isControls: true,
-			autoplay: 0,
-			slides: [
-				{ src: 'https://picsum.photos/576', alt: 'Placeholder.', caption: "This is a great caption." },
-				{ src: 'https://picsum.photos/576?random=2', alt: 'Placeholder.' }
-			]
-		}} />
+		<Carousel
+			content={{
+				isControls: true,
+				autoplay: 0,
+				slides: [
+					{
+						src: 'https://picsum.photos/576',
+						alt: 'Placeholder.',
+						caption: 'This is a great caption.'
+					},
+					{ src: 'https://picsum.photos/576?random=2', alt: 'Placeholder.' }
+				]
+			}}
+		/>
 	</article>
 </section>
 <section>
@@ -238,10 +286,12 @@
 		</ul>
 	</article>
 </section>
-<Footer content={{
-	notice: "This is a footer notice, you can add anything you want here."
-	,copyright: "Kyle Ulman"
-}}/>
+<Footer
+	content={{
+		notice: 'This is a footer notice, you can add anything you want here.',
+		copyright: 'Kyle Ulman'
+	}}
+/>
 
 <style lang="postcss">
 	header,
