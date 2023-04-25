@@ -9,7 +9,7 @@ export { default as Footer } from './Footer.svelte';
 export { default as Head } from './Head.svelte';
 export { default as Header } from './Header.svelte';
 export { default as InfoList } from './InfoList.svelte';
-export { default as PreloadImage } from './PreloadImage.svelte';
+export { default as Preload } from './Preload.svelte';
 export { default as Quote } from './Quote.svelte';
 export { default as Shroud } from './Shroud.svelte';
 

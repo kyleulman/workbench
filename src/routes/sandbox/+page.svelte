@@ -8,7 +8,7 @@
 		Footer,
 		Header,
 		InfoList,
-		PreloadImage,
+		Preload,
 		Quote,
 		Shroud
 	} from '$lib';
@@ -26,6 +26,15 @@
 		}}
 	/>
 </header>
+<section>
+	<Preload content={{
+		src: "https://picsum.photos/768/384", 
+		alt: "Placeholder.", 
+		width: 768, 
+		height: 384
+		}} 
+		/>
+</section>
 <Header
 	content={{
 		title: {
