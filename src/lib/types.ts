@@ -63,8 +63,11 @@ export interface Header {
 }
 
 export interface List {
-	heading: string;
-	list: Card[];
+	heading?: string;
+	list: {
+		icon: string,
+		detail: string
+	}[];
 }
 
 export interface Quote {

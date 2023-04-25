@@ -10,7 +10,7 @@
 <article
 	class:text-center={isCentered}
 	class:card={content.isSkeletonCard}
-	class="space-y-4"
+	class="space-y-2"
 >
 	{#if content.heading}
 		<h2>{@html content.heading}</h2>

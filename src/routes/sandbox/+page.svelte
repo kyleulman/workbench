@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Card from '$lib/Card.svelte';
+	import CardList from '$lib/CardList.svelte';
 	import Carousel from '$lib/Carousel.svelte';
 	import type { CarouselContent } from '$lib/types';
 	import type { PageData } from './$types';
@@ -18,11 +19,36 @@
 </script>
 
 <header>
-	<article class="card space-y-4">
-		<h1>{data.page.title}</h1>
-		<p>{data.page.description}</p>
-	</article>
+	<Card content={{
+		heading: data.page.title,
+		detail: data.page.description,
+		isSkeletonCard: true
+	}} />
 </header>
+<section>
+	<CardList content={{ heading: "Card List", list: [
+		{
+			icon: "search",
+			detail: "Search for something!"
+		},
+		{
+			icon: "home",
+			detail: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, dolore."
+		},
+		{
+			icon: "menu",
+			detail: "In libero inventore aspernatur! Exercitationem quaerat necessitatibus eveniet ipsa velit officia laborum omnis. Repellendus voluptate sunt, ad saepe rerum non?"
+		},
+		{
+			icon: "close",
+			detail: "Search for something!"
+		},
+		{
+			icon: "settings",
+			detail: "Search for something!"
+		},
+	] }}/>
+</section>
 <section>
 	<Card
 		content={{
