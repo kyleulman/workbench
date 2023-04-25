@@ -1,7 +1,19 @@
 <script lang="ts">
+	import Carousel from '$lib/Carousel.svelte';
+	import type { CarouselContent } from '$lib/types';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
+
+	const carousel: CarouselContent = {
+		isControls: true,
+		autoplay: 0,
+		slides: [
+			{ src: 'https://picsum.photos/576', alt: 'Placeholder.' },
+			{ src: 'https://picsum.photos/576?random=1', alt: 'Placeholder.' },
+			{ src: 'https://picsum.photos/576?random=2', alt: 'Placeholder.' }
+		]
+	};
 </script>
 
 <section class="p-8">
@@ -17,5 +29,10 @@
 				</ul>
 			</li>
 		</ul>
+	</article>
+</section>
+<section class="p-8">
+	<article>
+		<Carousel content={carousel} />
 	</article>
 </section>

@@ -1,8 +1,87 @@
+import type { SvelteComponentTyped } from 'svelte';
+
+// * Elements
 interface Image {
 	src: string;
 	alt: string;
 	width?: number | string;
 	height?: number | string;
+}
+
+// * Components
+export interface CarouselContent {
+	isControls: boolean;
+	autoplay: number;
+	slides: Image[];
+}
+
+export interface Card {
+	href?: string;
+	icon?: string;
+	image?: Figure;
+	heading?: string;
+	subheading?: string;
+	detail?: string;
+	actions?: {
+		label: string;
+		href?: string;
+		as?: 'a' | 'button';
+		onClick?: () => string;
+	}[];
+	isSkeletonCard?: boolean;
+}
+
+export interface Cta {
+	detail: string;
+	href: string;
+	label: string;
+}
+
+export interface Figure {
+	src: string;
+	alt: string;
+	width?: number;
+	height?: number;
+	caption?: string;
+	title?: string;
+	as?: 'iframe' | 'image'; // Defaults to image
+}
+
+export interface Footer {
+	notice?: string;
+	copyright: string;
+}
+
+export interface Header {
+	title: {
+		href: string;
+		label: string;
+		logo: Figure;
+	};
+	contact: {
+		icon: string;
+		href?: string;
+		label: string;
+	}[];
+}
+
+export interface List {
+	heading: string;
+	list: Card[];
+}
+
+export interface Quote {
+	detail: string;
+	name: string;
+	href: string;
+	label: string;
+}
+
+// * Data
+export interface Block {
+	componentName: string;
+	componentPromise?: Promise<SvelteComponentTyped>;
+	[index: string]: unknown;
 }
 
 // Metadata
