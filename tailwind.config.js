@@ -14,7 +14,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				"material-outlined": "Material\\ Symbols\\ Outlined"
+				'material-outlined': 'Material\\ Symbols\\ Outlined'
 			}
 		}
 	},
