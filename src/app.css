@@ -1,3 +1,29 @@
+body {
+	@apply mx-auto max-w-xl;
+}
+
+.material-symbols-outlined {
+	font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
+/* Extends Skeleton .card  */
+.card {
+	@apply p-4;
+}
+
+/* Custom inline bullet lists */
+ul.inline-list {
+	@apply my-2 list-none;
+}
+
+ul.inline-list > li > span {
+	@apply flex items-start before:mr-1 before:font-material-outlined before:text-2xl before:leading-none before:text-primary-500 before:content-["check"];
+}
+
+ul.inline-list > li > ul {
+	@apply my-0 ml-6;
+}
+
 /* Rocket theme uses Space Grotesk */
 @font-face {
 	font-family: 'Space Grotesk';

@@ -12,7 +12,11 @@ export default {
 		)
 	],
 	theme: {
-		extend: {}
+		extend: {
+			fontFamily: {
+				"material-outlined": "Material\\ Symbols\\ Outlined"
+			}
+		}
 	},
 	plugins: [...skeletonPlugin()]
 };
