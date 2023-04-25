@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Quote } from '$lib/types';
+	import type { Quote } from './types';
 
 	export let content: Quote;
 </script>

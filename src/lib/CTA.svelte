@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Cta } from '../types';
+	import type { Cta } from './types';
 
 	export let content: Cta;
 </script>

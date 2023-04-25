@@ -16,9 +16,6 @@ export interface CarouselContent {
 }
 
 export interface Card {
-	href?: string;
-	icon?: string;
-	image?: Figure;
 	heading?: string;
 	subheading?: string;
 	detail?: string;
@@ -26,7 +23,7 @@ export interface Card {
 		label: string;
 		href?: string;
 		as?: 'a' | 'button';
-		onClick?: () => string;
+		onClick?: () => void;
 	}[];
 	isSkeletonCard?: boolean;
 }

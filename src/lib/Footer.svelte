@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Footer } from '../types';
+	import type { Footer } from './types';
 
 	export let content: Footer;
 </script>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { List } from '$lib/types';
+	import type { List } from './types';
 
 	export let content: List;
 </script>

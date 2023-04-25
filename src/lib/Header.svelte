@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Header } from '../types';
+	import type { Header } from './types';
 
 	export let content: Header;
 </script>
