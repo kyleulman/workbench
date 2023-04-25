@@ -13,7 +13,13 @@
 			height={content.height}
 		/>
 	{:else}
-		<img src={content.src} alt={content.alt} class="bg-surface-700" width={content.width} height={content.height} />
+		<img
+			src={content.src}
+			alt={content.alt}
+			class="bg-surface-700"
+			width={content.width}
+			height={content.height}
+		/>
 	{/if}
 
 	{#if content.caption}

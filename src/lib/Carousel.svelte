@@ -3,7 +3,7 @@
 	import '@glidejs/glide/dist/css/glide.core.min.css';
 	import { onMount } from 'svelte';
 	import type { CarouselContent } from './types';
-	import Figure from './Figure.svelte';
+	import Preload from './Preload.svelte';
 
 	export let content: CarouselContent;
 
@@ -15,29 +15,32 @@
 	});
 </script>
 
-<div class="glide relative">
+<div class="glide relative bg-surface-800 pb-2">
 	<div class="glide__track" data-glide-el="track">
-		<ul class="glide__slides flex"> 
+		<ul class="glide__slides flex">
 			{#each content.slides as slide}
 				<li class="glide__slide">
-					<Figure content={slide} />
+					<Preload content={slide} />
 				</li>
 			{/each}
 		</ul>
 	</div>
 	{#if content.isControls}
-		<div data-glide-el="controls">
+		<div
+			data-glide-el="controls"
+			class="absolute top-1/2 flex w-full -translate-y-1/2 justify-between p-4 opacity-25 hover:opacity-100"
+		>
 			<button
 				data-glide-dir="<"
-				class="absolute left-0 top-1/2 h-full -translate-y-1/2 bg-neutral-900/50 px-8 py-4"
+				class="btn-icon variant-filled-primary font-material-outlined text-2xl"
 			>
-				Prev
+				navigate_before
 			</button>
 			<button
 				data-glide-dir=">"
-				class="absolute right-0 top-1/2 h-full -translate-y-1/2 bg-neutral-900/50 px-8 py-4"
+				class="btn-icon variant-filled-primary font-material-outlined text-2xl"
 			>
-				Next
+				navigate_next
 			</button>
 		</div>
 	{/if}

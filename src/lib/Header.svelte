@@ -4,13 +4,15 @@
 	export let content: Header;
 </script>
 
-<header
-	class="flex flex-col sm:flex-row items-center justify-between gap-8 p-8"
->
-	<h1 class="flex-1">
+<header class="flex flex-col items-center justify-between gap-8 sm:flex-row">
+	<h1 class="max-w-64 flex-1">
 		<a href={content.title.href}>
 			{#if content.title.logo}
-				<img src={content.title.logo.src} alt={content.title.logo.alt} />
+				<img
+					src={content.title.logo.src}
+					alt={content.title.logo.alt}
+					class="w-full object-cover"
+				/>
 			{:else}
 				{@html content.title.label}
 			{/if}

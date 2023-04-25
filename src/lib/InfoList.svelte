@@ -13,7 +13,7 @@
 			<li class="flex flex-col items-start gap-4 sm:flex-row">
 				{#if item.icon || item.image}
 					<figure
-						class="list-item-icon"
+						class="list-item-icon variant-filled-primary flex h-14 w-14 items-start justify-center overflow-hidden p-1"
 					>
 						{#if item.icon}
 							<span class="font-material-outlined text-[50px] leading-none">
@@ -46,6 +46,5 @@
 <style lang="postcss">
 	.list-item-icon {
 		border-radius: var(--theme-rounded-base);
-		@apply variant-filled-primary flex h-14 w-14 items-start justify-center overflow-hidden p-1;
 	}
 </style>

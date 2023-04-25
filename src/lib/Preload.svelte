@@ -15,7 +15,7 @@
 </script>
 
 {#await preload(content.src)}
-	<div> <Figure {content} /> </div>
+	<div><Figure {content} /></div>
 {:then}
-	<div in:fly> <Figure {content} /> </div>
+	<div in:fly><Figure {content} /></div>
 {/await}

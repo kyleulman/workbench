@@ -42,7 +42,7 @@ export interface Figure {
 	height?: number;
 	caption?: string;
 	title?: string;
-	as?: 'iframe' | "placeholder" | 'image'; // Defaults to image
+	as?: 'iframe' | 'placeholder' | 'image'; // Defaults to image
 }
 
 export interface Footer {

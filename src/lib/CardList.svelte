@@ -15,7 +15,7 @@
 			>
 				{#if item.icon}
 					<span
-						class="list-item-icon"
+						class="list-item-icon variant-filled-primary h-8 w-8 font-material-outlined text-2xl"
 					>
 						{item.icon}
 					</span>
@@ -31,6 +31,5 @@
 <style lang="postcss">
 	.list-item-icon {
 		border-radius: var(--theme-rounded-base);
-		@apply variant-filled-primary h-8 w-8 font-material-outlined text-2xl;
 	}
 </style>

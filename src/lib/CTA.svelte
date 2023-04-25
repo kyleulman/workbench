@@ -5,9 +5,9 @@
 </script>
 
 <article
-	class="tablet-m:my-4 flex flex-wrap items-center justify-evenly gap-4"
+	class="flex flex-col items-center justify-evenly gap-4 sm:flex-row"
 	class:card={content.isSkeletonCard}
 >
-	<h2 class="min-w-[200px] flex-1">{content.heading}</h2>
+	<h2 class="text-center sm:text-left">{content.heading}</h2>
 	<a href={content.href} class="btn variant-filled-primary">{content.label}</a>
 </article>

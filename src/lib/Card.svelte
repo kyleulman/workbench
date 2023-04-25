@@ -23,7 +23,7 @@
 	{/if}
 	{#if content.actions}
 		<ul
-			class="flex flex-wrap items-center gap-4"
+			class="items-left flex flex-wrap gap-4"
 			class:justify-center={isCentered}
 		>
 			{#each content.actions as action, i}

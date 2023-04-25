@@ -11,6 +11,5 @@ export { default as Header } from './Header.svelte';
 export { default as InfoList } from './InfoList.svelte';
 export { default as Preload } from './Preload.svelte';
 export { default as Quote } from './Quote.svelte';
-export { default as Shroud } from './Shroud.svelte';
 
 export type { PageMetadata, SharedMetadata } from './types';

@@ -2,7 +2,8 @@ body {
 	@apply mx-auto max-w-xl;
 }
 
-img, iframe {
+img,
+iframe {
 	border-radius: var(--theme-rounded-container);
 }
 

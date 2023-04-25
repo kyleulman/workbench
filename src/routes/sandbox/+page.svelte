@@ -9,47 +9,20 @@
 		Header,
 		InfoList,
 		Preload,
-		Quote,
-		Shroud
+		Quote
 	} from '$lib';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
 </script>
 
-<header>
-	<Card
-		content={{
-			heading: data.page.title,
-			detail: data.page.description,
-			isSkeletonCard: true
-		}}
-	/>
-</header>
-<section>
-	<Quote content={{
-		detail: "Did you hear that? They've shut down the main reactor. We'll be destroyed for sure. This is madness! We're doomed! There'll be no escape for the Princess this time. What's that? Artoo! Artoo-Detoo, where are you? At last! Where have you been? They're heading in this direction."
-		,name: "George Lucas",
-		href: "#star-wars",
-		label: "Star Wars: Episode IV - A New Hope"
-	}}/>
-</section>
-<section>
-	<Preload content={{
-		src: "https://picsum.photos/768/384", 
-		alt: "Placeholder.", 
-		width: 768, 
-		height: 384
-		}} 
-		/>
-</section>
 <Header
 	content={{
 		title: {
 			href: '/',
 			label: 'Site Title',
 			logo: {
-				src: 'https://picsum.photos/250'
+				src: 'https://picsum.photos/300'
 			}
 		},
 		contact: [
@@ -70,6 +43,36 @@
 		]
 	}}
 />
+<header>
+	<Card
+		content={{
+			heading: data.page.title,
+			detail: data.page.description,
+			isSkeletonCard: true
+		}}
+	/>
+</header>
+<section>
+	<Quote
+		content={{
+			detail:
+				"Did you hear that? They've shut down the main reactor. We'll be destroyed for sure. This is madness! We're doomed! There'll be no escape for the Princess this time. What's that? Artoo! Artoo-Detoo, where are you? At last! Where have you been? They're heading in this direction.",
+			name: 'George Lucas',
+			href: '#star-wars',
+			label: 'Star Wars: Episode IV - A New Hope'
+		}}
+	/>
+</section>
+<section>
+	<Preload
+		content={{
+			src: 'https://picsum.photos/768/384',
+			alt: 'Placeholder.',
+			width: 768,
+			height: 384
+		}}
+	/>
+</section>
 <section>
 	<InfoList
 		content={{
@@ -235,6 +238,11 @@
 					label: 'Primary Button',
 					href: '#primary-button',
 					as: 'button'
+				},
+				{
+					label: 'Second Button',
+					href: '#second-button',
+					as: 'button'
 				}
 			],
 			isSkeletonCard: true
@@ -309,10 +317,3 @@
 		copyright: 'Kyle Ulman'
 	}}
 />
-
-<style lang="postcss">
-	header,
-	section {
-		@apply p-8;
-	}
-</style>
