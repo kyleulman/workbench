@@ -17,7 +17,7 @@
 	"id": "/?source=pwa",
 	"start_url": "/?source=pwa",
 	"scope": "/",
-	"background_color": "#443b36",
+	"background_color": "#313944",
 	"theme_color": "#ffffff",
 	"display": "standalone",
 	"orientation": "portrait"

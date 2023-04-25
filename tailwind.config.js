@@ -1,5 +1,5 @@
-import path from 'path'
-import skeletonPlugin from '@skeletonlabs/skeleton/tailwind/skeleton.cjs'
+import path from 'path';
+import skeletonPlugin from '@skeletonlabs/skeleton/tailwind/skeleton.cjs';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -15,4 +15,4 @@ export default {
 		extend: {}
 	},
 	plugins: [...skeletonPlugin()]
-}
+};

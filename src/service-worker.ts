@@ -2,17 +2,17 @@
 /// <reference lib="esnext" />
 /// <reference lib="webworker" />
 /// <reference types="@sveltejs/kit" />
-import { build, files, prerendered, version } from '$service-worker'
+import { build, files, prerendered, version } from '$service-worker';
 
 // @types/serviceworker
-declare const self: ServiceWorkerGlobalScope
+declare const self: ServiceWorkerGlobalScope;
 
 // Generate access key for new cache
-const cacheId = `cache${version}`
+const cacheId = `cache${version}`;
 
 // Worker build files + /static files + prerendered pages
-const cachePayloadArr: string[] = [...build, ...files, ...prerendered]
-const cachePayloadSet: Set<string> = new Set(cachePayloadArr)
+const cachePayloadArr: string[] = [...build, ...files, ...prerendered];
+const cachePayloadSet: Set<string> = new Set(cachePayloadArr);
 
 self.addEventListener('install', (event) => {
 	event.waitUntil(
@@ -20,19 +20,19 @@ self.addEventListener('install', (event) => {
 			.open(cacheId)
 			.then((cache) => cache.addAll(cachePayloadArr))
 			.then(() => self.skipWaiting())
-	)
-})
+	);
+});
 self.addEventListener('activate', (event) => {
 	event.waitUntil(
 		caches.keys().then(async (keys) => {
 			for (const key of keys) {
-				if (key !== cacheId) await caches.delete(key)
+				if (key !== cacheId) await caches.delete(key);
 			}
 
-			self.clients.claim()
+			self.clients.claim();
 		})
-	)
-})
+	);
+});
 
 // prettier-ignore
 self.addEventListener('fetch', (event) => {
@@ -88,17 +88,17 @@ function checks(event: FetchEvent) {
 }
 
 async function fetchAndCache(request: Request) {
-	const cache = await caches.open(`offline${version}`)
+	const cache = await caches.open(`offline${version}`);
 
 	try {
-		const response = await fetch(request)
-		cache.put(request, response.clone())
+		const response = await fetch(request);
+		cache.put(request, response.clone());
 
-		return response
+		return response;
 	} catch (err) {
-		const response = await cache.match(request)
-		if (response) return response
+		const response = await cache.match(request);
+		if (response) return response;
 
-		throw err
+		throw err;
 	}
 }
