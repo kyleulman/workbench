@@ -22,11 +22,3 @@ export const home: { metadata: PageMetadata } = {
 		url: ''
 	}
 };
-
-export const sandbox: { metadata: PageMetadata } = {
-	metadata: {
-		title: 'Sandbox',
-		description: 'For experiments and throwaway code.',
-		url: ''
-	}
-};
