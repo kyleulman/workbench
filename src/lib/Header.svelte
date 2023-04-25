@@ -5,7 +5,7 @@
 </script>
 
 <header
-	class="flex flex-col items-start justify-between gap-8 mobile-l:flex-row mobile-l:items-center"
+	class="mobile-l:flex-row mobile-l:items-center flex flex-col items-start justify-between gap-8"
 >
 	<h1 class="flex-1">
 		<a href={content.title.href}>

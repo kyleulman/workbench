@@ -1,6 +1,8 @@
 export { default as CTA } from './CTA.svelte';
 export { default as Card } from './Card.svelte';
 export { default as CardList } from './CardList.svelte';
+
+// TODO: Make Iframe-friendly
 export { default as Carousel } from './Carousel.svelte';
 export { default as Figure } from './Figure.svelte';
 export { default as Footer } from './Footer.svelte';

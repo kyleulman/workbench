@@ -10,7 +10,9 @@
 	{/if}
 	<ul class="flex flex-wrap gap-4">
 		{#each content.list as item}
-			<li class="card flex min-w-[200px] flex-[45%] flex-col items-center gap-2 text-center">
+			<li
+				class="card flex min-w-[200px] flex-[45%] flex-col items-center gap-2 text-center"
+			>
 				{#if item.icon}
 					<span
 						class="h-8 w-8 rounded-full bg-primary-500 font-material-outlined text-2xl text-black"

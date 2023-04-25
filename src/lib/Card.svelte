@@ -22,7 +22,10 @@
 		<p>{@html content.detail}</p>
 	{/if}
 	{#if content.actions}
-		<ul class="flex items-center flex-wrap gap-4" class:justify-center={isCentered}>
+		<ul
+			class="flex flex-wrap items-center gap-4"
+			class:justify-center={isCentered}
+		>
 			{#each content.actions as action, i}
 				<li>
 					{#if action.href}

@@ -4,7 +4,7 @@
 	import { LightSwitch } from '@skeletonlabs/skeleton';
 	import '@skeletonlabs/skeleton/styles/all.css';
 	import '@skeletonlabs/skeleton/themes/theme-rocket.css';
-	import "@glidejs/glide/dist/css/glide.core.min.css";
+	import '@glidejs/glide/dist/css/glide.core.min.css';
 	import '../app.css';
 	import type { LayoutData } from './$types';
 

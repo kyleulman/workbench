@@ -12,7 +12,7 @@ interface Image {
 export interface CarouselContent {
 	isControls: boolean;
 	autoplay: number;
-	slides: Image[];
+	slides: Figure[];
 }
 
 export interface Card {
@@ -29,14 +29,15 @@ export interface Card {
 }
 
 export interface Cta {
-	detail: string;
+	heading: string;
 	href: string;
 	label: string;
+	isSkeletonCard?: boolean;
 }
 
 export interface Figure {
 	src: string;
-	alt: string;
+	alt?: string;
 	width?: number;
 	height?: number;
 	caption?: string;
@@ -65,8 +66,8 @@ export interface Header {
 export interface List {
 	heading?: string;
 	list: {
-		icon: string,
-		detail: string
+		icon: string;
+		detail: string;
 	}[];
 }
 

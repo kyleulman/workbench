@@ -3,6 +3,7 @@
 	import '@glidejs/glide/dist/css/glide.core.min.css';
 	import { onMount } from 'svelte';
 	import type { CarouselContent } from './types';
+	import Figure from './Figure.svelte';
 
 	export let content: CarouselContent;
 
@@ -16,10 +17,10 @@
 
 <div class="glide relative">
 	<div class="glide__track" data-glide-el="track">
-		<ul class="glide__slides">
+		<ul class="glide__slides flex"> 
 			{#each content.slides as slide}
 				<li class="glide__slide">
-					<img src={slide.src} alt={slide.alt} class="w-full" />
+					<Figure content={slide} />
 				</li>
 			{/each}
 		</ul>

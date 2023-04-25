@@ -10,7 +10,7 @@
 	{/if}
 	<ul class="space-y-8">
 		{#each content.list as item}
-			<li class="flex flex-col items-start gap-4 mobile-l:flex-row">
+			<li class="mobile-l:flex-row flex flex-col items-start gap-4">
 				{#if item.icon || item.image}
 					<figure
 						class="flex justify-center overflow-hidden rounded-full bg-primary-500 p-1"
