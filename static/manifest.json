@@ -1,0 +1,24 @@
+{
+	"short_name": "Workbench",
+	"name": "Workbench PWA",
+	"description": "The tools that power my projects.",
+	"icons": [
+		{
+			"src": "/images/icon-512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		},
+		{
+			"src": "/images/icon-192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		}
+	],
+	"id": "/?source=pwa",
+	"start_url": "/?source=pwa",
+	"scope": "/",
+	"background_color": "#443b36",
+	"theme_color": "#ffffff",
+	"display": "standalone",
+	"orientation": "portrait"
+}
