@@ -5,13 +5,13 @@ export const sharedMetadata: SharedMetadata = {
 	type: 'website',
 	robots: 'all',
 	image: {
-		src: 'https://ky-workbench.vercel.app/images/card-1440x720.png',
+		src: 'https://res.cloudinary.com/kyuisonline/image/upload/v1682717850/workbench/card-720-png.png',
 		alt: 'Svelte logo.',
-		width: '1440',
+		width: '720',
 		height: '720'
 	},
 	twitter: {
-		card: 'summary_large_image'
+		card: 'summary'
 	}
 };
 
