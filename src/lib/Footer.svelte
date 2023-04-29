@@ -8,5 +8,5 @@
 	{#if content.notice}
 		<p>{@html content.notice}</p>
 	{/if}
-	<p>&copy; {new Date().getFullYear()} {content.copyright}</p>
+	<p>&copy; {new Date().getFullYear()} {@html content.copyright}</p>
 </footer>

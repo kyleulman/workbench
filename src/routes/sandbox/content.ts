@@ -27,7 +27,14 @@ export const sandbox: {
 			width: 144,
 			height: 144
 		},
-		detail: `Heya! I'm a web developer from Wilmington, NC. I utilize SvelteKit to help teams on Upwork bring their ideas to life. <br /> <a href="#on-upwork" class="btn mt-2">Let's work together</a>`
+		detail: `Heya! I'm a web developer from Wilmington, NC. I utilize SvelteKit to help teams on Upwork bring their ideas to life.`,
+		actions: [
+			{
+				href: '/on-upwork',
+				label: "Let's work together",
+				as: 'button'
+			}
+		]
 	},
 	projects: {
 		heading: 'Projects',

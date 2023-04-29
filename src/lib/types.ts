@@ -8,23 +8,19 @@ interface Image {
 	height?: number | string;
 }
 
-// * Components
-export interface CarouselContent {
-	isControls: boolean;
-	autoplay: number;
-	slides: Figure[];
+interface Action {
+	label: string;
+	href?: string;
+	as?: 'a' | 'button';
+	onClick?: () => void;
 }
 
+// * Components
 export interface Card {
 	heading?: string;
 	subheading?: string;
 	detail?: string;
-	actions?: {
-		label: string;
-		href?: string;
-		as?: 'a' | 'button';
-		onClick?: () => void;
-	}[];
+	actions?: Action[];
 	isSkeletonCard?: boolean;
 }
 
@@ -95,6 +91,7 @@ export interface Quote {
 export interface Bio {
 	image: Image;
 	detail: string;
+	actions?: Action[];
 }
 
 // * Data
