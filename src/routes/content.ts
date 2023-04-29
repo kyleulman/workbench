@@ -3,7 +3,7 @@ import type { PageMetadata, SharedMetadata, Block } from '$lib/types';
 export const sharedMetadata: SharedMetadata = {
 	title: 'Workbench',
 	type: 'website',
-	robots: 'all',
+	robots: 'noindex',
 	image: {
 		src: 'https://res.cloudinary.com/kyuisonline/image/upload/v1682717850/workbench/card-720-png.png',
 		alt: 'Svelte logo.',
