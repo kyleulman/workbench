@@ -11,7 +11,7 @@
 			heading: data.content.metadata.title,
 			detail: `
 				Hey there, I'm Kyu. I built this workbench to keep my project tools in one
-				place. You may find the <a href="https://github.com/kyleulman/workbench" class="underline"
+				place. You may find the <a href="https://github.com/kyuisonline/workbench" class="underline"
 					>repo</a
 				> more interesting.
 		`,
